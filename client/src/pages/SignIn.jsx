@@ -16,7 +16,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/auth/signin", {
+      const res = await fetch("https://tasknode-oh9v.onrender.com/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,9 +30,9 @@ export default function SignIn() {
         return;
       }
 
-      // Handle successful sign-in (e.g., store token, redirect)
+      
       setError(null);
-      navigate("/dashboard"); // Redirect to a protected page or dashboard
+      navigate("/dashboard"); 
 
     } catch (error) {
       console.error("Sign-In error:", error);
